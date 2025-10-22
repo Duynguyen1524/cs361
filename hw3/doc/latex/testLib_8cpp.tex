@@ -1,0 +1,209 @@
+\hypertarget{testLib_8cpp}{}\doxysection{src/test\+Lib.cpp File Reference}
+\label{testLib_8cpp}\index{src/testLib.cpp@{src/testLib.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}test\+Lib.\+h\char`\"{}}\newline
+Include dependency graph for test\+Lib.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=279pt]{testLib_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{testLib_8cpp_a2d37cd875267b20c705aa3451f717dff}{random\+Array}} (int size)
+\item 
+void \mbox{\hyperlink{testLib_8cpp_a53f1d78853bc0adc747b4d118a7f731e}{print\+Array}} (int $\ast$A, int size)
+\item 
+int $\ast$ \mbox{\hyperlink{testLib_8cpp_acaa8ae2e72d572b973a683f38db8fdda}{copy\+Array}} (int $\ast$A, int size)
+\item 
+int \mbox{\hyperlink{testLib_8cpp_a050a89bf908ef058cf927c584cf9ee0a}{is\+Sorted}} (int $\ast$A, int size)
+\item 
+int \mbox{\hyperlink{testLib_8cpp_adabd23b712fbbd54ea2363fdd0c0675d}{has\+Same\+Values}} (int $\ast$A, int $\ast$X, int sizeA, int sizeX)
+\item 
+int \mbox{\hyperlink{testLib_8cpp_a3fd8010eacf868f488a5de007b6593c4}{count}} (int $\ast$A, int size, int target)
+\item 
+int \mbox{\hyperlink{testLib_8cpp_a52bf1513e08057a02747ea216474d237}{run\+Test}} (int n, void($\ast$func)(int $\ast$A, int size))
+\item 
+int \mbox{\hyperlink{testLib_8cpp_a58f8ddd719df9da0d6fd3a9f3d22010c}{run\+Mult\+Tests}} (int n, int k, void($\ast$func)(int $\ast$A, int size))
+\item 
+int \mbox{\hyperlink{testLib_8cpp_a4a0ce5531dd6ca39f27513e2ecd5d2ec}{full\+Test\+Bed}} (int max\+Exp, void($\ast$func)(int $\ast$A, int size))
+\item 
+int \mbox{\hyperlink{testLib_8cpp_af53c4638cac925b790ad3e14f2ea6cc8}{fast\+Pow}} (int base, int exp)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mark Boady \href{mailto:mwb33@drexel.edu}{\texttt{ mwb33@drexel.\+edu}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/2022 
+\end{DoxyDate}
+\hypertarget{index_Description}{}\doxysubsection{Description}\label{index_Description}
+Implementation of sort unit testing library. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{testLib_8cpp_acaa8ae2e72d572b973a683f38db8fdda}\label{testLib_8cpp_acaa8ae2e72d572b973a683f38db8fdda}} 
+\index{testLib.cpp@{testLib.cpp}!copyArray@{copyArray}}
+\index{copyArray@{copyArray}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{copyArray()}{copyArray()}}
+{\footnotesize\ttfamily int$\ast$ copy\+Array (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Copy an Array 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to make a copy of \\
+\hline
+{\em size} & is the number of elements in A \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to a new array with the same contents 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a3fd8010eacf868f488a5de007b6593c4}\label{testLib_8cpp_a3fd8010eacf868f488a5de007b6593c4}} 
+\index{testLib.cpp@{testLib.cpp}!count@{count}}
+\index{count@{count}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily int count (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size,  }\item[{int}]{target }\end{DoxyParamCaption})}
+
+Count how many times target appears in A. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to search \\
+\hline
+{\em size} & is the number of elements in A \\
+\hline
+{\em target} & is the number to search for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of times target appears in A 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_af53c4638cac925b790ad3e14f2ea6cc8}\label{testLib_8cpp_af53c4638cac925b790ad3e14f2ea6cc8}} 
+\index{testLib.cpp@{testLib.cpp}!fastPow@{fastPow}}
+\index{fastPow@{fastPow}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{fastPow()}{fastPow()}}
+{\footnotesize\ttfamily int fast\+Pow (\begin{DoxyParamCaption}\item[{int}]{base,  }\item[{int}]{exp }\end{DoxyParamCaption})}
+
+Compute the exponent base$^\wedge$exp quickly. 
+\begin{DoxyParams}{Parameters}
+{\em base} & is the base of the exponent \\
+\hline
+{\em exp} & is the exponent to raise the base to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the result of base$^\wedge$exp 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a4a0ce5531dd6ca39f27513e2ecd5d2ec}\label{testLib_8cpp_a4a0ce5531dd6ca39f27513e2ecd5d2ec}} 
+\index{testLib.cpp@{testLib.cpp}!fullTestBed@{fullTestBed}}
+\index{fullTestBed@{fullTestBed}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{fullTestBed()}{fullTestBed()}}
+{\footnotesize\ttfamily int full\+Test\+Bed (\begin{DoxyParamCaption}\item[{int}]{max\+Exp,  }\item[{void($\ast$)(int $\ast$A, int size)}]{func }\end{DoxyParamCaption})}
+
+Test all sizes from 0 to 2$^\wedge$max\+Exp going in powers of 2 
+\begin{DoxyParams}{Parameters}
+{\em max\+Exp} & is the largest power of 2 to test with \\
+\hline
+{\em func} & is the function to run all the tests on \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{testLib_8cpp_adabd23b712fbbd54ea2363fdd0c0675d}\label{testLib_8cpp_adabd23b712fbbd54ea2363fdd0c0675d}} 
+\index{testLib.cpp@{testLib.cpp}!hasSameValues@{hasSameValues}}
+\index{hasSameValues@{hasSameValues}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{hasSameValues()}{hasSameValues()}}
+{\footnotesize\ttfamily int has\+Same\+Values (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int $\ast$}]{X,  }\item[{int}]{sizeA,  }\item[{int}]{sizeX }\end{DoxyParamCaption})}
+
+Check that two arrays contain all the same values. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the first array \\
+\hline
+{\em X} & is the second array \\
+\hline
+{\em sizeA} & is the number of elements in A \\
+\hline
+{\em sizeX} & is the number of elements in X \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the array is sorted and 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a050a89bf908ef058cf927c584cf9ee0a}\label{testLib_8cpp_a050a89bf908ef058cf927c584cf9ee0a}} 
+\index{testLib.cpp@{testLib.cpp}!isSorted@{isSorted}}
+\index{isSorted@{isSorted}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{isSorted()}{isSorted()}}
+{\footnotesize\ttfamily int is\+Sorted (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Check If Sorted 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to check \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 if the array is sorted and 0 otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a53f1d78853bc0adc747b4d118a7f731e}\label{testLib_8cpp_a53f1d78853bc0adc747b4d118a7f731e}} 
+\index{testLib.cpp@{testLib.cpp}!printArray@{printArray}}
+\index{printArray@{printArray}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}}
+{\footnotesize\ttfamily void print\+Array (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Print an Array 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to print \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{testLib_8cpp_a2d37cd875267b20c705aa3451f717dff}\label{testLib_8cpp_a2d37cd875267b20c705aa3451f717dff}} 
+\index{testLib.cpp@{testLib.cpp}!randomArray@{randomArray}}
+\index{randomArray@{randomArray}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{randomArray()}{randomArray()}}
+{\footnotesize\ttfamily int$\ast$ random\+Array (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+Generate a Random Array 
+\begin{DoxyParams}{Parameters}
+{\em size} & is the number of random elements in the array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a58f8ddd719df9da0d6fd3a9f3d22010c}\label{testLib_8cpp_a58f8ddd719df9da0d6fd3a9f3d22010c}} 
+\index{testLib.cpp@{testLib.cpp}!runMultTests@{runMultTests}}
+\index{runMultTests@{runMultTests}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{runMultTests()}{runMultTests()}}
+{\footnotesize\ttfamily int run\+Mult\+Tests (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{k,  }\item[{void($\ast$)(int $\ast$A, int size)}]{func }\end{DoxyParamCaption})}
+
+Run k tests all with the same size 
+\begin{DoxyParams}{Parameters}
+{\em n} & is the size of the array to test \\
+\hline
+{\em k} & is the number of tests to run \\
+\hline
+{\em func} & is the sort function to test with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success and 0 for failure 
+\end{DoxyReturn}
+\mbox{\Hypertarget{testLib_8cpp_a52bf1513e08057a02747ea216474d237}\label{testLib_8cpp_a52bf1513e08057a02747ea216474d237}} 
+\index{testLib.cpp@{testLib.cpp}!runTest@{runTest}}
+\index{runTest@{runTest}!testLib.cpp@{testLib.cpp}}
+\doxysubsubsection{\texorpdfstring{runTest()}{runTest()}}
+{\footnotesize\ttfamily int run\+Test (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{void($\ast$)(int $\ast$A, int size)}]{func }\end{DoxyParamCaption})}
+
+Test a merge function for a specific array size 
+\begin{DoxyParams}{Parameters}
+{\em n} & is the size of the array to test with \\
+\hline
+{\em func} & is the function to test sorting with \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 for success and 0 for failure 
+\end{DoxyReturn}

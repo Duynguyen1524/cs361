@@ -1,0 +1,77 @@
+\hypertarget{mergesort_8h}{}\doxysection{src/mergesort.h File Reference}
+\label{mergesort_8h}\index{src/mergesort.h@{src/mergesort.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{mergesort_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{mergesort_8h_ac62f9441dca3cc722c07fd7563e4fa1c}{mergesort}} (int $\ast$A, int size)
+\item 
+void \mbox{\hyperlink{mergesort_8h_a13ca06587fae58dbcb0c1048d107d5d0}{msort\+Sec}} (int $\ast$A, int start, int stop)
+\item 
+void \mbox{\hyperlink{mergesort_8h_aa393fca0e36db9b32ab0f305fcc9db4c}{merge}} (int $\ast$A, int start, int middle, int stop)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mark Boady \href{mailto:mwb33@drexel.edu}{\texttt{ mwb33@drexel.\+edu}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/2022 
+\end{DoxyDate}
+\hypertarget{index_Description}{}\doxysubsection{Description}\label{index_Description}
+This header defines a classic textbook Merge Sort Algorithm. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{mergesort_8h_aa393fca0e36db9b32ab0f305fcc9db4c}\label{mergesort_8h_aa393fca0e36db9b32ab0f305fcc9db4c}} 
+\index{mergesort.h@{mergesort.h}!merge@{merge}}
+\index{merge@{merge}!mergesort.h@{mergesort.h}}
+\doxysubsubsection{\texorpdfstring{merge()}{merge()}}
+{\footnotesize\ttfamily void merge (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{start,  }\item[{int}]{middle,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+Merge two sorted sections of the array. Specifically, merge A\mbox{[}start to middle\mbox{]} an A\mbox{[}middle+1 to stop\mbox{]}. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to merge elements in \\
+\hline
+{\em start} & is the first value in the first section \\
+\hline
+{\em middle} & is the last value in the first section \\
+\hline
+{\em stop} & is the last element in the second section \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mergesort_8h_ac62f9441dca3cc722c07fd7563e4fa1c}\label{mergesort_8h_ac62f9441dca3cc722c07fd7563e4fa1c}} 
+\index{mergesort.h@{mergesort.h}!mergesort@{mergesort}}
+\index{mergesort@{mergesort}!mergesort.h@{mergesort.h}}
+\doxysubsubsection{\texorpdfstring{mergesort()}{mergesort()}}
+{\footnotesize\ttfamily void mergesort (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Sort Array A using Merge Sort. Array is sorted in place. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to sort \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{mergesort_8h_a13ca06587fae58dbcb0c1048d107d5d0}\label{mergesort_8h_a13ca06587fae58dbcb0c1048d107d5d0}} 
+\index{mergesort.h@{mergesort.h}!msortSec@{msortSec}}
+\index{msortSec@{msortSec}!mergesort.h@{mergesort.h}}
+\doxysubsubsection{\texorpdfstring{msortSec()}{msortSec()}}
+{\footnotesize\ttfamily void msort\+Sec (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{start,  }\item[{int}]{stop }\end{DoxyParamCaption})}
+
+Merge Sort Array values between index start and stop 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to sort \\
+\hline
+{\em start} & is the first index to sort \\
+\hline
+{\em stop} & is the last index to sort \\
+\hline
+\end{DoxyParams}

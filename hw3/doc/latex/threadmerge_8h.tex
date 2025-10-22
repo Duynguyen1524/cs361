@@ -1,0 +1,77 @@
+\hypertarget{threadmerge_8h}{}\doxysection{src/threadmerge.h File Reference}
+\label{threadmerge_8h}\index{src/threadmerge.h@{src/threadmerge.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{threadmerge_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{threadmerge_8h_a8045e4327ef33f7352e7433f78710205}{tmergesort}} (int $\ast$A, int size, int thread\+Count)
+\item 
+void \mbox{\hyperlink{threadmerge_8h_acb7bba763c5e722d5f292cfd371092f3}{helper}} (int $\ast$A, int size, int thread\+Count)
+\item 
+void \mbox{\hyperlink{threadmerge_8h_a2dfea7bb30f9924fcbe19c0a37a83169}{helper\+Merge}} (int $\ast$A, int size, int thread\+Count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mark Boady \href{mailto:mwb33@drexel.edu}{\texttt{ mwb33@drexel.\+edu}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/2022 
+\end{DoxyDate}
+\hypertarget{index_Description}{}\doxysubsection{Description}\label{index_Description}
+This file describes the threaded merge sort. Threads are used to speed up the classic merge sort. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{threadmerge_8h_acb7bba763c5e722d5f292cfd371092f3}\label{threadmerge_8h_acb7bba763c5e722d5f292cfd371092f3}} 
+\index{threadmerge.h@{threadmerge.h}!helper@{helper}}
+\index{helper@{helper}!threadmerge.h@{threadmerge.h}}
+\doxysubsubsection{\texorpdfstring{helper()}{helper()}}
+{\footnotesize\ttfamily void helper (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size,  }\item[{int}]{thread\+Count }\end{DoxyParamCaption})}
+
+helper is a function that spawns threads to sort segments of the array in parallel. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to sort \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+{\em thread\+Count} & is the maximum number of threads to use when sorting. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{threadmerge_8h_a2dfea7bb30f9924fcbe19c0a37a83169}\label{threadmerge_8h_a2dfea7bb30f9924fcbe19c0a37a83169}} 
+\index{threadmerge.h@{threadmerge.h}!helperMerge@{helperMerge}}
+\index{helperMerge@{helperMerge}!threadmerge.h@{threadmerge.h}}
+\doxysubsubsection{\texorpdfstring{helperMerge()}{helperMerge()}}
+{\footnotesize\ttfamily void helper\+Merge (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size,  }\item[{int}]{thread\+Count }\end{DoxyParamCaption})}
+
+helper\+Merge is a function that merges the sorted segments of the array. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to sort \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+{\em thread\+Count} & is the maximum number of threads to use when sorting. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{threadmerge_8h_a8045e4327ef33f7352e7433f78710205}\label{threadmerge_8h_a8045e4327ef33f7352e7433f78710205}} 
+\index{threadmerge.h@{threadmerge.h}!tmergesort@{tmergesort}}
+\index{tmergesort@{tmergesort}!threadmerge.h@{threadmerge.h}}
+\doxysubsubsection{\texorpdfstring{tmergesort()}{tmergesort()}}
+{\footnotesize\ttfamily void tmergesort (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size,  }\item[{int}]{thread\+Count }\end{DoxyParamCaption})}
+
+Merge Sort array in place using maximum number of threads provided. If number of elements is smaller than number of threads, extraneous threads are not spanned. 
+\begin{DoxyParams}{Parameters}
+{\em A} & is the array to sort \\
+\hline
+{\em size} & is the number of elements in the array \\
+\hline
+{\em thread\+Count} & is the maximum number of threads to use when sorting. \\
+\hline
+\end{DoxyParams}

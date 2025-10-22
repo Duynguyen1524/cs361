@@ -1,0 +1,141 @@
+\hypertarget{main_8cpp}{}\doxysection{src/main.cpp File Reference}
+\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}mergesort.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}threadmerge.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+Lib.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8cpp_adf460f60b7115b7f392c933c8b766677}{thread\+Merge2}} (int $\ast$A, int size)
+\item 
+void \mbox{\hyperlink{main_8cpp_a27ffa0d253d5aea91181d6e0dc140661}{thread\+Merge4}} (int $\ast$A, int size)
+\item 
+void \mbox{\hyperlink{main_8cpp_a33e3a719ae75ae77ea55d86addc6e412}{thread\+Merge16}} (int $\ast$A, int size)
+\item 
+void \mbox{\hyperlink{main_8cpp_a09d9fc2591d11c7c369450b19e1a81f2}{thread\+Merge32}} (int $\ast$A, int size)
+\item 
+void \mbox{\hyperlink{main_8cpp_a946d671edbcf881ee01163b3d0ec35ef}{run\+Timings}} (int b)
+\item 
+double \mbox{\hyperlink{main_8cpp_a3280901d345bd981b4f1b689e116ceb6}{time\+Func}} (int size, void($\ast$func)(int $\ast$A, int n))
+\item 
+int \mbox{\hyperlink{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Mark Boady \href{mailto:mwb33@drexel.edu}{\texttt{ mwb33@drexel.\+edu}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2021-\/2022 
+\end{DoxyDate}
+\hypertarget{index_Description}{}\doxysubsection{Description}\label{index_Description}
+The main program just runs all the tests defined elsewhere and prints out output. Then in collects the timings and also prints out output. It is primarily concerned with I/O design. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+Run all tests then run timings. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & is not used \\
+\hline
+{\em argv} & is not used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+is always 0 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8cpp_a946d671edbcf881ee01163b3d0ec35ef}\label{main_8cpp_a946d671edbcf881ee01163b3d0ec35ef}} 
+\index{main.cpp@{main.cpp}!runTimings@{runTimings}}
+\index{runTimings@{runTimings}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{runTimings()}{runTimings()}}
+{\footnotesize\ttfamily void run\+Timings (\begin{DoxyParamCaption}\item[{int}]{b }\end{DoxyParamCaption})}
+
+Run all timings and print a table. Tests sizes 0 to 2$^\wedge$b. 
+\begin{DoxyParams}{Parameters}
+{\em b} & is the max power of two to use in the table \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a33e3a719ae75ae77ea55d86addc6e412}\label{main_8cpp_a33e3a719ae75ae77ea55d86addc6e412}} 
+\index{main.cpp@{main.cpp}!threadMerge16@{threadMerge16}}
+\index{threadMerge16@{threadMerge16}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{threadMerge16()}{threadMerge16()}}
+{\footnotesize\ttfamily void thread\+Merge16 (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Test Threaded Merge Sort with 16 Threads 
+\begin{DoxyParams}{Parameters}
+{\em A} & is a pointer to the array to sort \\
+\hline
+{\em size} & is the size of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_adf460f60b7115b7f392c933c8b766677}\label{main_8cpp_adf460f60b7115b7f392c933c8b766677}} 
+\index{main.cpp@{main.cpp}!threadMerge2@{threadMerge2}}
+\index{threadMerge2@{threadMerge2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{threadMerge2()}{threadMerge2()}}
+{\footnotesize\ttfamily void thread\+Merge2 (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Test Threaded Merge Sort with 2 Threads 
+\begin{DoxyParams}{Parameters}
+{\em A} & is a pointer to the array to sort \\
+\hline
+{\em size} & is the size of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a09d9fc2591d11c7c369450b19e1a81f2}\label{main_8cpp_a09d9fc2591d11c7c369450b19e1a81f2}} 
+\index{main.cpp@{main.cpp}!threadMerge32@{threadMerge32}}
+\index{threadMerge32@{threadMerge32}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{threadMerge32()}{threadMerge32()}}
+{\footnotesize\ttfamily void thread\+Merge32 (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Test Threaded Merge Sort with 32 Threads 
+\begin{DoxyParams}{Parameters}
+{\em A} & is a pointer to the array to sort \\
+\hline
+{\em size} & is the size of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a27ffa0d253d5aea91181d6e0dc140661}\label{main_8cpp_a27ffa0d253d5aea91181d6e0dc140661}} 
+\index{main.cpp@{main.cpp}!threadMerge4@{threadMerge4}}
+\index{threadMerge4@{threadMerge4}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{threadMerge4()}{threadMerge4()}}
+{\footnotesize\ttfamily void thread\+Merge4 (\begin{DoxyParamCaption}\item[{int $\ast$}]{A,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Test Threaded Merge Sort with 4 Threads 
+\begin{DoxyParams}{Parameters}
+{\em A} & is a pointer to the array to sort \\
+\hline
+{\em size} & is the size of the array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{main_8cpp_a3280901d345bd981b4f1b689e116ceb6}\label{main_8cpp_a3280901d345bd981b4f1b689e116ceb6}} 
+\index{main.cpp@{main.cpp}!timeFunc@{timeFunc}}
+\index{timeFunc@{timeFunc}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{timeFunc()}{timeFunc()}}
+{\footnotesize\ttfamily double time\+Func (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{void($\ast$)(int $\ast$A, int n)}]{func }\end{DoxyParamCaption})}
+
+Time execution of a function on an array. 
+\begin{DoxyParams}{Parameters}
+{\em size} & is the number of elements in the array \\
+\hline
+{\em func} & is the function to time \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The time taken in microseconds 
+\end{DoxyReturn}
