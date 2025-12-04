@@ -1,0 +1,30 @@
+Justin Nguyen jn867@drexel.edu
+1. Compile the program using the Makefile: make
+2. This will produce an executable called `search`.
+3. Run the program by providing the root folder(optional) and the target word:
+./search <target string> <root directory>(optional)
+Example:
+./search "<thread>"
+
+4. The program will display the thread find it, the folder it is in, and the line it lives. 
+
+
+Question 1:
+I use channel data structures because I want to send message from the producer to worker safely. The implemtation requires message-based communication instead of shared memory. Using channels, I can send the name of the file to worker so that they can open the file and search for the word. 
+
+Question 2:
+My producer open the folder and find worth-opening file and send the name of a file to a buffered channel. That's is how thread pool get its task
+
+Question 3:
+After the Producer finishes scanning the directory tree,the function sends a poison pill to signal the thread pool to end it task. When a worker receives this poison pill instead of a file path, it knows there are no more tasks.
+
+question 4:
+Channels provide thread safety automatically by ensuring that only one thread accesses the internal queue at a time. Workers call receive() to safely get file paths, and the Producer calls send() to safely add tasks.
+
+
+Question 5:
+I think channel is the most effective concurrent tool because channel reduces the need of sharing states, mutexes, and condional variebles. Channel also allow communication with message.Compared to semaphores or locks, channels make the code easier.  I did not enjoy the approach in Homework 6. The shared data structures and the need for multiple semaphores make the logic harder. Channel communication felts more intuitive if applied to Homework 6. 
+
+
+
+

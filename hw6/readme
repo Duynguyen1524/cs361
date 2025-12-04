@@ -1,0 +1,35 @@
+Justin Nguyen - jn867@drexel.edu    
+Instruction to run code
+1. Compile the program using the Makefile: make
+2. This will produce an executable called `island`.
+3. Run the program by providing the number of adults and children:
+./island <num_adults> <num_children>
+Example:
+./island 3 4
+4. The program will display each boat trip and then print a final summary.
+
+---
+Question 1
+I used semaphores to protect the boat because multiple threads attempt to access or control it at the same time. These synchronization tools ensure that only one thread can take a specific role on the boat, preventing race conditions and invalid states. Without them, the system would easily deadlock or allow multiple threads to occupy the same seat.
+
+
+
+Question 2:
+Threads determine their position based on the semaphore that wakes them and the current state of the boat. A dedicated “ferry child” thread always acts as the passenger and is responsible for returning the boat after each trip. Every other thread becomes the driver when the driver seat is open.
+
+
+Question 3:
+After each crossing, the ferry child returns the boat to the island and resets the driver positions and moves to passenger seats. This ensures ferry child always has a break. Once the boat's driver is empty, the monitor wakes the next threads needed for the upcoming trip. This creates a reliable cycle where the boat always starts in a clean and consistent state.
+
+
+Question 4:
+I maintain counters that track how many adults and children remain on the island, and the monitor continues scheduling crossings until both counts reach zero. Each successful trip reduces the population on the island, and the ferry child ensures the boat always returns for the next person. Because the monitor never stops until the island is empty, every person is eventually transported to the mainland.
+
+
+Question 5:
+The most challenging part was coordinating the threads so they interacted safely without deadlocking. Ensuring that only one driver and one passenger boarded required careful control of semaphores and boat state transitions. Debugging timing issues taught me a lot about thread scheduling and synchronization in concurrent systems.
+
+
+
+
+
